@@ -100,6 +100,8 @@ button { color: inherit; }
 .hero-image { overflow: hidden; background: var(--wine-deep); }
 .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: 57% 50%; transform: scale(1.04); }
 .hero--home .hero-image img { object-position: 58% 48%; }
+.hero--story .hero-image img { object-position: 55% 50%; transform: scale(1.015); }
+.hero--lantern .hero-image img { object-position: 50% 50%; transform: scale(1.015); }
 .hero-shade { background: linear-gradient(90deg, rgb(38 8 9 / 73%) 0%, rgb(52 10 10 / 48%) 39%, rgb(59 9 10 / 7%) 78%), linear-gradient(0deg, rgb(36 5 7 / 42%), transparent 38%, rgb(61 10 13 / 18%)); }
 .hero-content { position: relative; z-index: 1; padding-top: 90px; }
 .hero-copy { max-width: 520px; margin: 31px 0 26px; color: rgb(255 253 248 / 92%); font-size: 18px; font-weight: 300; line-height: 1.7; }
@@ -309,6 +311,8 @@ button { color: inherit; }
   .hero, .hero--home, .hero--inner { min-height: 760px; min-height: max(710px, 100svh); }
   .hero--inner { min-height: max(640px, 88svh); }
   .hero-image img, .hero--home .hero-image img { object-position: 68% center; }
+  .hero--story .hero-image img { object-position: 58% center; }
+  .hero--lantern .hero-image img { object-position: 56% center; }
   .hero-shade { background: linear-gradient(90deg, rgb(38 8 9 / 64%), rgb(52 10 10 / 20%) 100%), linear-gradient(0deg, rgb(36 5 7 / 47%), transparent 60%, rgb(61 10 13 / 15%)); }
   .hero-content { padding-top: 64px; }
   .hero-copy { max-width: 360px; margin: 23px 0 21px; font-size: 18px; line-height: 1.6; }
@@ -395,6 +399,10 @@ button { color: inherit; }
   .footer-main > p { justify-self: end; font-size: 18px; }
   .footer-nav { grid-column: 1 / -1; align-items: flex-start; }
   .footer-bottom { gap: 8px; flex-direction: column; padding-block: 14px 18px; font-size: 18px; }
+}
+
+@media (min-width: 641px) {
+  .hero--home .hero-content { padding-bottom: clamp(150px, 18vh, 180px); }
 }
 
 @media (max-width: 360px) {
