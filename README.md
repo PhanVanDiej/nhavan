@@ -14,7 +14,7 @@ pages/cau-chuyen-lang-nghe.html         # Câu chuyện làng nghề
 pages/long-den-truyen-thong.html        # Lồng đèn truyền thống
 styles/site.css                         # Biến thiết kế, thành phần và responsive
 scripts/site.js                         # Menu, header cuộn và animation
-assets/images/main_cover.jpg            # Ảnh hero dùng chung
+assets/images/main-cover.jpg            # Ảnh hero dùng chung
 context/                                # Context thiết kế và ảnh tham khảo
 AGENTS.md                               # Quy ước chung cho các lần triển khai tiếp theo
 ```

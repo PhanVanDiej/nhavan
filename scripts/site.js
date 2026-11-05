@@ -127,11 +127,20 @@
   if (window.ScrollTrigger) {
     const processLine = document.querySelector(".process-line");
     const processList = document.querySelector(".process-list");
+    const processMoon = document.querySelector(".process-moon");
     if (processLine && processList) {
       gsap.fromTo(processLine,
         { scaleY: 0, transformOrigin: "top center" },
         { scaleY: 1, ease: "none", scrollTrigger: { trigger: processList, start: "top 74%", end: "bottom 70%", scrub: 0.7 } }
       );
+
+      if (processMoon) {
+        gsap.to(processMoon, {
+          y: () => processLine.offsetHeight,
+          ease: "none",
+          scrollTrigger: { trigger: processList, start: "top 74%", end: "bottom 70%", scrub: 0.7, invalidateOnRefresh: true }
+        });
+      }
     }
 
     gsap.utils.toArray("[data-reveal]").forEach((element) => {
