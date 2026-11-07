@@ -110,9 +110,10 @@
 
   const heroImage = document.querySelector(".hero-image img");
   if (heroImage) {
+    const isStoryHero = document.querySelector(".hero--story");
     gsap.fromTo(heroImage,
-      { scale: 1.09 },
-      { scale: 1.015, duration: 2.2, ease: "power2.out", clearProps: "transform" }
+      { scale: isStoryHero ? 1.025 : 1.09 },
+      { scale: isStoryHero ? 1 : 1.015, duration: 2.2, ease: "power2.out", clearProps: "transform" }
     );
 
     if (window.ScrollTrigger && !mobileMenu.matches) {
@@ -131,14 +132,14 @@
     if (processLine && processList) {
       gsap.fromTo(processLine,
         { scaleY: 0, transformOrigin: "top center" },
-        { scaleY: 1, ease: "none", scrollTrigger: { trigger: processList, start: "top 74%", end: "bottom 70%", scrub: 0.7 } }
+        { scaleY: 1, ease: "none", scrollTrigger: { trigger: processList, start: "top 74%", end: "bottom 70%", scrub: true } }
       );
 
       if (processMoon) {
         gsap.to(processMoon, {
           y: () => processLine.offsetHeight,
           ease: "none",
-          scrollTrigger: { trigger: processList, start: "top 74%", end: "bottom 70%", scrub: 0.7, invalidateOnRefresh: true }
+          scrollTrigger: { trigger: processList, start: "top 74%", end: "bottom 70%", scrub: true, invalidateOnRefresh: true }
         });
       }
     }
