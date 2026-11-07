@@ -8,7 +8,7 @@
   --paper: #fffdf8;
   --ink: #241d1a;
   --muted: #746963;
-  --gold: #d8ad68;
+  --gold: #ffbe07;
   --serif: "Cormorant Garamond", "Iowan Old Style", "Times New Roman", serif;
   --display: "BCDDC Hardware Rough", "Cormorant Garamond", "Iowan Old Style", serif;
   --sans: "Roboto", "Segoe UI", Arial, sans-serif;
@@ -269,10 +269,9 @@ button { color: inherit; }
 
 /* Shared footer */
 .site-footer { color: var(--paper); background: var(--wine-deep); }
-.footer-main { display: grid; grid-template-columns: 1fr 1fr 1.2fr; align-items: start; gap: 35px; padding-block: 54px 45px; }
+.footer-main { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 35px; padding-block: 54px 45px; }
 .brand--footer { align-self: start; }
 .brand--footer .brand-logo { height: 70px; max-width: 240px; }
-.footer-main > p { margin: 0; color: rgb(255 248 236 / 70%); font: 400 20px/1.28 var(--serif); }
 .footer-nav { display: flex; align-items: flex-end; flex-direction: column; gap: 13px; }
 .footer-nav a { color: rgb(255 248 236 / 92%); font-size: 18px; transition: color .2s ease; }
 .footer-nav a:hover { color: var(--gold); }
@@ -391,7 +390,7 @@ button { color: inherit; }
   .process-intro { max-width: 360px; margin-top: 20px; font-size: 18px; }
   .process-section { --process-line-top: 390px; }
   .process-line { bottom: 3%; left: calc(var(--gutter) + 12px); transform: none; }
-  .process-moon { left: calc(var(--gutter) + 12px); transform: none; }
+  .process-moon { left: calc(var(--gutter) + 12px); transform: translateX(-50%); }
   .process-list { gap: 0; padding-block: 62px 0; }
   .process-item, .process-item:nth-child(even) { min-height: 0; grid-template-columns: 26px minmax(0, 1fr); align-items: start; gap: 0 13px; padding-block: 25px; }
   .process-image, .process-item:nth-child(even) .process-image { width: 100%; grid-column: 2; grid-row: 1; margin: 0 0 18px; }
@@ -408,9 +407,8 @@ button { color: inherit; }
   .workshop-stamp { right: -15px; bottom: 19px; width: 96px; height: 96px; font-size: 18px; }
   .workshop-copy .section-title { margin-bottom: 17px; font-size: clamp(40px, 11vw, 52px); }
   .workshop-copy > p:not(.eyebrow) { font-size: 18px; }
-  .footer-main { grid-template-columns: 1fr 1fr; gap: 28px 15px; padding-block: 39px 31px; }
-  .footer-main > p { justify-self: end; font-size: 18px; }
-  .footer-nav { grid-column: 1 / -1; align-items: flex-start; }
+  .footer-main { grid-template-columns: 1fr; gap: 24px; padding-block: 39px 31px; }
+  .footer-nav { align-items: flex-start; }
   .footer-bottom { gap: 8px; flex-direction: column; padding-block: 14px 18px; font-size: 18px; }
 }
 
