@@ -137,7 +137,7 @@ button { color: inherit; }
 .feature-card { display: block; }
 .feature-card--craft { margin-top: 48px; }
 .feature-card--explore { margin-top: 96px; }
-.feature-number, .feature-description, .feature-caption strong { display: block; }
+.feature-number, .feature-description { display: block; }
 .feature-number { margin-bottom: 15px; color: var(--wine); font-size: 18px; font-weight: 500; letter-spacing: .02em; }
 .feature-image { display: block; aspect-ratio: 4 / 3; height: auto; overflow: hidden; background: var(--cream-deep); }
 .feature-image img { height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 1s var(--ease-out), filter .8s ease; }
@@ -145,8 +145,7 @@ button { color: inherit; }
 .feature-card--craft .feature-image img { object-position: 35% center; }
 .feature-card:hover .feature-image img { filter: saturate(1.08); transform: scale(1.045); }
 .feature-caption { display: flex; align-items: center; justify-content: space-between; padding-top: 19px; }
-.feature-caption strong { color: var(--wine); font: 500 25px var(--serif); }
-.feature-description { margin-top: 8px; color: var(--muted); font-size: 18px; font-weight: 400; line-height: 1.55; }
+.feature-description { margin-top: 0; color: var(--muted); font-size: 18px; font-weight: 400; line-height: 1.55; }
 .feature-caption i { display: grid; width: 36px; height: 36px; place-items: center; color: var(--wine); border: 1px solid rgb(176 26 40 / 35%); border-radius: 50%; font: normal 18px var(--sans); transition: color .3s ease, background .3s ease, transform .3s var(--ease-out); }
 .feature-card:hover .feature-caption i { color: var(--paper); background: var(--wine); transform: rotate(45deg); }
 .feature-map-art { position: relative; display: block; aspect-ratio: 4 / 3; height: auto; overflow: hidden; background: #eee7da; }
@@ -347,7 +346,6 @@ button { color: inherit; }
   .feature-number { margin-bottom: 10px; font-size: 18px; }
   .feature-image, .feature-map-art { aspect-ratio: 4 / 3; height: auto; }
   .feature-caption { padding-top: 13px; }
-  .feature-caption strong { font-size: 23px; }
   .feature-description { max-width: 300px; font-size: 18px; }
   .feature-caption i { width: 32px; height: 32px; }
   .location-section { padding-block: 76px 64px; }
@@ -419,7 +417,6 @@ button { color: inherit; }
 @media (max-width: 360px) {
   :root { --gutter: 19px; }
   .display-title { font-size: 58px; line-height: 1.06; }
-  .feature-caption strong { font-size: 21px; }
   .lantern-grid { gap: 17px 9px; }
   .village-gallery-grid { gap: 6px; }
 }
